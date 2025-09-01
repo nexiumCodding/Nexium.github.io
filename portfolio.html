@@ -4,33 +4,39 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio — Nexium</title>
-  <link rel="stylesheet" href="styles.css?v=2" />
-  <script src="script.js?v=2" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=4" />
+  <script src="script.js?v=4" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html"><span class="logo">✦</span><span>Nexium</span></a>
-    <nav class="nav">
-      <a href="index.html">Accueil</a>
-      <a href="portfolio.html" aria-current="page">Portfolio</a>
-      <a href="download.html">Téléchargement</a>
-      <a href="servers.html">Nos serveurs</a>
-    </nav>
+  <header class="site-header with-contours --soft">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-logo">✦</span><span class="brand-text">Nexium</span></a>
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="portfolio.html" aria-current="page">Portfolio</a>
+        <a href="download.html">Téléchargement</a>
+        <a href="servers.html">Nos serveurs</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="page-hero" style="--hero:url('assets/banners/portfolio.jpg')">
-    <div class="page-hero__inner">
+  <section class="page-hero with-contours --soft" style="--hero:url('assets/banners/portfolio.jpg')">
+    <div class="container page-hero__inner">
       <h1>Portfolio</h1>
-      <p>Mes projets et créations.</p>
+      <p class="subhead">Ajoute tes images dans <code>assets/portfolio/</code> et liste-les dans <code>portfolio.json</code>.</p>
     </div>
   </section>
 
-  <main class="section">
+  <main class="container section">
     <div id="gallery" class="grid gallery"></div>
   </main>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Nexium</p>
+  <footer class="site-footer with-contours --soft">
+    <div class="container foot">
+      <span>© <span id="year"></span> Nexium</span>
+    </div>
   </footer>
 </body>
 </html>
