@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio — Nexium</title>
+  <meta name="description" content="Galerie de projets Nexium." />
   <link rel="stylesheet" href="styles.css?v=1" />
   <script src="script.js" defer></script>
 </head>
@@ -12,15 +13,21 @@
     <a class="brand" href="index.html"><span class="logo">✦</span><span>Nexium</span></a>
     <nav class="nav">
       <a href="index.html">Accueil</a>
-      <a href="portfolio.html">Portfolio</a>
+      <a href="portfolio.html" aria-current="page">Portfolio</a>
       <a href="download.html">Téléchargement</a>
       <a href="servers.html">Nos serveurs</a>
     </nav>
   </header>
 
+  <!-- HERO bannière -->
+  <section class="page-hero" style="--hero:url('assets/banners/portfolio.jpg')">
+    <div class="page-hero__inner">
+      <h1>Portfolio</h1>
+      <p>Ajoute tes images dans <code>assets/portfolio/</code> et liste-les dans <code>portfolio.json</code>.</p>
+    </div>
+  </section>
+
   <main class="section">
-    <h1 class="gradient">Portfolio</h1>
-    <p class="lead">Ajoute simplement tes images dans <code>assets/portfolio/</code> et <code>portfolio.json</code> pour les afficher ici.</p>
     <div id="gallery" class="grid gallery"></div>
   </main>
 
