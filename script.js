@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Portfolio
   const gallery = document.getElementById("gallery");
   if (gallery) {
-    fetch("portfolio.json?v=5")
+    fetch("portfolio.json?v=6")
       .then(r => r.json())
       .then(items => {
         if (!Array.isArray(items) || !items.length) {
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(() => (gallery.innerHTML = "<p>Impossible de charger le portfolio.</p>"));
   }
 
-  // Copier IP
+  // Copier IP (si tu ajoutes la classe copy-ip sur les boutons)
   document.querySelectorAll(".copy-ip").forEach(btn => {
     btn.addEventListener("click", e => {
       e.preventDefault();
