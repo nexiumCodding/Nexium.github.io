@@ -4,37 +4,44 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Téléchargement — Nexium Assistant</title>
-  <link rel="stylesheet" href="styles.css?v=2" />
-  <script src="script.js?v=2" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=4" />
+  <script src="script.js?v=4" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html"><span class="logo">✦</span><span>Nexium</span></a>
-    <nav class="nav">
-      <a href="index.html">Accueil</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="download.html" aria-current="page">Téléchargement</a>
-      <a href="servers.html">Nos serveurs</a>
-    </nav>
+  <header class="site-header with-contours --soft">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-logo">✦</span><span class="brand-text">Nexium</span></a>
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="download.html" aria-current="page">Téléchargement</a>
+        <a href="servers.html">Nos serveurs</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="page-hero" style="--hero:url('assets/banners/assistant.jpg')">
-    <div class="page-hero__inner">
+  <section class="page-hero with-contours --soft" style="--hero:url('assets/banners/assistant.jpg')">
+    <div class="container page-hero__inner">
       <h1>Assistance GMod</h1>
-      <p>Télécharge l’application Nexium.</p>
+      <p class="subhead">Télécharge l’application Nexium pour Windows.</p>
     </div>
   </section>
 
-  <main class="section">
-    <article class="card glass">
+  <main class="container section">
+    <article class="card glass hover-up with-contours --soft">
       <h2>Windows</h2>
-      <p>Compatible Windows 10/11.</p>
-      <a class="btn-nexium --assistant" href="assets/nexium-assistant.zip">Télécharger (.zip)</a>
+      <p>Compatible Windows 10/11 (64-bit).</p>
+      <a class="btn btn-nx --assistant with-contours --tight --soft" href="assets/nexium-assistant.zip">Télécharger (.zip)</a>
+      <p class="muted small">Renomme le fichier à chaque release (ex. <code>nexium-assistant-v1-1.zip</code>) pour éviter le cache.</p>
     </article>
   </main>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Nexium</p>
+  <footer class="site-footer with-contours --soft">
+    <div class="container foot">
+      <span>© <span id="year"></span> Nexium</span>
+    </div>
   </footer>
 </body>
 </html>
