@@ -1,18 +1,18 @@
-:root{
+:root {
   --bg:#080810;
   --panel:#0f1020;
   --text:#eaeaf7;
   --muted:#9aa0b4;
-  --primary:#b174ff;    /* violet */
-  --accent:#56c2ff;     /* bleu */
+  --primary:#b174ff;   /* violet */
+  --accent:#56c2ff;    /* bleu */
   --radius:14px;
 }
 
-/* Fond global (ton image) */
-body{
-  margin:0;
-  font-family:Poppins, Arial, sans-serif;
-  color:var(--text);
+/* 🌌 Fond global */
+body {
+  margin: 0;
+  font-family: Poppins, Arial, sans-serif;
+  color: var(--text);
   background: url("assets/background.webp") no-repeat center center fixed,
               radial-gradient(circle at 15% 20%, rgba(177,116,255,.12), transparent 70%),
               radial-gradient(circle at 80% 85%, rgba(86,194,255,.10), transparent 70%),
@@ -20,78 +20,104 @@ body{
   background-size: cover, auto, auto, auto;
 }
 
-a{color:var(--primary); text-decoration:none}
-a:hover{text-decoration:underline}
-.small{font-size:.9rem}
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.small { font-size: .9rem; }
 
-/* Header / nav */
-.site-header{
-  position:sticky; top:0; z-index:1000;
-  display:flex; justify-content:space-between; align-items:center;
-  padding:14px 20px;
+/* 🔝 Header */
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 20px;
   background: rgba(10,10,22,.6);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
-.brand{display:flex; align-items:center; gap:8px; font-weight:700; color:var(--text); text-decoration:none}
-.logo{color:var(--accent)}
-.nav{display:flex; gap:16px}
-.nav a{color:var(--text); opacity:.9; padding:6px 8px; border-radius:8px}
-.nav a[aria-current="page"]{background:rgba(255,255,255,.06)}
+.brand { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--text); }
+.logo { color: var(--accent); }
+.nav { display: flex; gap: 16px; }
+.nav a { color: var(--text); opacity: .9; padding: 6px 8px; border-radius: 8px; }
+.nav a[aria-current="page"] { background: rgba(255,255,255,.06); }
 
-/* Layout */
-.section{max-width:1100px; margin:38px auto; padding:0 20px}
-h1,h2,h3{margin:0 0 10px}
-.lead{color:var(--muted); margin:6px 0 18px}
-.gradient{background:linear-gradient(90deg,var(--primary),var(--accent)); -webkit-background-clip:text; color:transparent}
+/* 📐 Layout */
+.section { max-width: 1100px; margin: 38px auto; padding: 0 20px; }
+h1,h2,h3 { margin: 0 0 10px; }
+.lead { color: var(--muted); margin: 6px 0 18px; }
+.gradient { background: linear-gradient(90deg,var(--primary),var(--accent));
+            -webkit-background-clip: text; color: transparent; }
 
-/* Cards */
-.grid{display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.card{background: rgba(15,16,32,.82); border:1px solid rgba(255,255,255,.08);
-      border-radius:var(--radius); overflow:hidden}
-.card.glass{backdrop-filter: blur(6px)}
-.card-body{padding:18px 18px 20px}
+/* 🖼️ Cartes */
+.grid { display: grid; gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); }
+.card { background: rgba(15,16,32,.82);
+        border: 1px solid rgba(255,255,255,.08);
+        border-radius: var(--radius); overflow: hidden; }
+.card.glass { backdrop-filter: blur(6px); }
+.card-body { padding: 18px 18px 20px; }
 
-/* Bannières */
-.banner-img{width:100%; height:160px; object-fit:cover; display:block}
+/* 🖼️ Bannières dans les cartes */
+.banner-img { width: 100%; height: 160px;
+              object-fit: cover; display: block; }
 
-/* Page hero (en-tête visuel par page) */
-.page-hero{
+/* 🌠 Page hero (en-tête de page avec bannière) */
+.page-hero {
   --overlay: rgba(0,0,0,.45);
   background:
     linear-gradient(180deg,var(--overlay),rgba(0,0,0,.25)),
     var(--hero) center/cover no-repeat;
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:var(--radius);
-  margin:20px auto 0;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  margin: 20px auto 0;
 }
-.page-hero__inner{padding:58px 22px}
-.page-hero h1{font-size:2rem}
-.page-hero p{color:#d7dbf0}
+.page-hero__inner { padding: 58px 22px; }
+.page-hero h1 { font-size: 2rem; }
+.page-hero p { color: #d7dbf0; }
 
-/* Buttons — texture néon */
-.btn-nexium{
-  display:inline-block; cursor:pointer; user-select:none;
-  font-weight:700; text-transform:uppercase; letter-spacing:.5px;
-  color:#fff; padding:12px 22px; border-radius:10px; border:none;
+/* 🔘 Boutons texturés Nexium */
+.btn-nexium {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.25s;
   background:
-    linear-gradient(0deg, rgba(0,0,0,.25), rgba(0,0,0,.25)),
-    url("assets/banners/portfolio.jpg") center/cover no-repeat; /* texture par défaut */
-  box-shadow: 0 0 18px rgba(177,116,255,.45), 0 0 36px rgba(86,194,255,.35);
-  transition: transform .2s, box-shadow .2s, filter .2s;
+    linear-gradient(0deg, rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    url("assets/banners/portfolio.jpg") center/cover no-repeat;
+  box-shadow: 0 0 20px rgba(177,116,255,.45),
+              0 0 40px rgba(86,194,255,.3);
 }
-.btn-nexium:hover{ transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 0 26px rgba(177,116,255,.7), 0 0 52px rgba(86,194,255,.6);
-  filter: saturate(115%) }
+.btn-nexium:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 26px rgba(177,116,255,.7),
+              0 0 52px rgba(86,194,255,.6);
+  filter: saturate(115%);
+}
 
-/* Variantes pour adapter la texture au contexte si tu veux */
-.btn-nexium.--assistant{ background:
-  linear-gradient(0deg, rgba(0,0,0,.25), rgba(0,0,0,.25)),
-  url("assets/banners/assistant.jpg") center/cover no-repeat }
-.btn-nexium.--servers{ background:
-  linear-gradient(0deg, rgba(0,0,0,.25), rgba(0,0,0,.25)),
-  url("assets/banners/servers.jpg") center/cover no-repeat }
+/* variantes par texture */
+.btn-nexium.--assistant {
+  background:
+    linear-gradient(0deg, rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    url("assets/banners/assistant.jpg") center/cover no-repeat;
+}
+.btn-nexium.--servers {
+  background:
+    linear-gradient(0deg, rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    url("assets/banners/servers.jpg") center/cover no-repeat;
+}
 
-/* Footer */
-.site-footer{margin-top:40px; text-align:center; padding:20px; color:var(--muted);
-  background: rgba(10,10,22,.6); backdrop-filter: blur(8px); border-top:1px solid rgba(255,255,255,.08)}
+/* 📌 Footer */
+.site-footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  background: rgba(10,10,22,.6);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255,255,255,.08);
+}
