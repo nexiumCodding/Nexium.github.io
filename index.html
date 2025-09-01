@@ -6,8 +6,8 @@
   <title>Nexium — Accueil</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=5" />
-  <script src="script.js?v=5" defer></script>
+  <link rel="stylesheet" href="styles.css?v=6" />
+  <script src="script.js?v=6" defer></script>
 </head>
 <body>
   <!-- NAV -->
@@ -17,44 +17,43 @@
         <span class="brand-logo">✦</span><span class="brand-text">Nexium</span>
       </a>
       <nav class="nav">
-        <a href="index.html" aria-current="page">Accueil</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="download.html">Téléchargement</a>
-        <a href="servers.html">Nos serveurs</a>
+        <a href="index.html" class="pill active" aria-current="page">Accueil</a>
+        <a href="portfolio.html" class="pill">Portfolio</a>
+        <a href="download.html" class="pill">Téléchargement</a>
+        <a href="servers.html" class="pill">Nos serveurs</a>
       </nav>
     </div>
+    <div class="nav-underline"></div>
   </header>
 
-  <!-- HERO avec recherche + badges -->
+  <!-- HERO -->
   <section class="hero with-contours">
     <div class="container hero-inner">
-      <h1>Outils et créations <span class="grad">Nexium</span></h1>
-      <p class="subhead">Assistance GMod • Portfolio • Serveurs — design galaxie/néon.</p>
-
+      <h1 class="hero-title">Undetected <span class="grad">Nexium&nbsp;Tools</span><br/>with <span class="grad">24/7</span> Support</h1>
       <form class="searchbar" role="search" onsubmit="event.preventDefault();">
         <span class="icon">🔎</span>
         <input type="search" placeholder="Rechercher un projet, un outil…" aria-label="Rechercher" />
-        <button type="submit" class="btn btn-nx --assistant with-contours --tight --soft">Rechercher</button>
+        <button type="submit" class="btn btn-primary">Rechercher</button>
       </form>
 
-      <ul class="badges">
-        <li class="badge">
-          <span class="badge-icon">🛠️</span>
-          <div><strong>3+</strong><small>projets actifs</small></div>
+      <ul class="stats-pills">
+        <li class="pill stat">
+          <span class="stat-icon">📦</span>
+          <div><strong>300&nbsp;000+</strong><small>Downloads</small></div>
         </li>
-        <li class="badge">
-          <span class="badge-icon">⭐</span>
-          <div><strong>Qualité</strong><small>design & perf</small></div>
+        <li class="pill stat">
+          <span class="stat-icon">⭐</span>
+          <div><strong>5/5</strong><small>Reviews</small></div>
         </li>
-        <li class="badge">
-          <span class="badge-icon">🛡️</span>
-          <div><strong>Sécurisé</strong><small>fichiers vérifiés</small></div>
+        <li class="pill stat">
+          <span class="stat-icon">🛡️</span>
+          <div><strong>EVP</strong><small>Trusted</small></div>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- Panneaux -->
+  <!-- PANNEAUX -->
   <section class="container section">
     <div class="grid cards-3">
       <article class="card glass hover-up with-contours --soft">
@@ -64,7 +63,7 @@
         <div class="card-body">
           <h2>Portfolio</h2>
           <p>Mes créations : addons, maps, UI…</p>
-          <a class="btn btn-nx with-contours --tight --soft" href="portfolio.html">Voir</a>
+          <a class="btn btn-textured" data-tex="portfolio" href="portfolio.html">Voir</a>
         </div>
       </article>
 
@@ -75,7 +74,7 @@
         <div class="card-body">
           <h2>Assistance GMod</h2>
           <p>Application légère et claire.</p>
-          <a class="btn btn-nx --assistant with-contours --tight --soft" href="download.html">Télécharger</a>
+          <a class="btn btn-textured" data-tex="assistant" href="download.html">Télécharger</a>
         </div>
       </article>
 
@@ -86,7 +85,7 @@
         <div class="card-body">
           <h2>Nos serveurs</h2>
           <p>Rejoins nos mondes connectés.</p>
-          <a class="btn btn-nx --servers with-contours --tight --soft" href="servers.html">Découvrir</a>
+          <a class="btn btn-textured" data-tex="servers" href="servers.html">Découvrir</a>
         </div>
       </article>
     </div>
@@ -95,7 +94,7 @@
   <footer class="site-footer with-contours --soft">
     <div class="container foot">
       <span>© <span id="year"></span> Nexium</span>
-      <span class="foot-muted">Thème “Nebula” inspiré, non affilié.</span>
+      <span class="foot-muted">Theme Nexium 95 (authorized look-alike)</span>
     </div>
   </footer>
 </body>
