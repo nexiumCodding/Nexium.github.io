@@ -6,96 +6,136 @@
   <title>Nexium — Accueil</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=6" />
-  <script src="script.js?v=6" defer></script>
+  <link rel="stylesheet" href="styles.css?v=7" />
+  <script src="script.js?v=7" defer></script>
 </head>
 <body>
-  <!-- NAV -->
+  <!-- NAV 1 -->
   <header class="site-header with-contours --soft">
-    <div class="container nav-wrap">
+    <div class="container nav-top">
       <a class="brand" href="index.html">
         <span class="brand-logo">✦</span><span class="brand-text">Nexium</span>
       </a>
-      <nav class="nav">
-        <a href="index.html" class="pill active" aria-current="page">Accueil</a>
-        <a href="portfolio.html" class="pill">Portfolio</a>
-        <a href="download.html" class="pill">Téléchargement</a>
-        <a href="servers.html" class="pill">Nos serveurs</a>
-      </nav>
+
+      <div class="nav-right">
+        <span class="chip online"><span class="dot"></span> 67 ONLINE</span>
+        <a class="chip icon" href="#" aria-label="Discord">💬</a>
+        <a class="chip icon" href="#" aria-label="Wallet">$</a>
+        <div class="chip user">PirateLégendaire</div>
+      </div>
     </div>
     <div class="nav-underline"></div>
+
+    <!-- NAV 2 (pills avec icônes) -->
+    <div class="container nav-second with-contours --soft">
+      <nav class="menu">
+        <a class="pill active" href="#"><span class="i">👜</span> Store</a>
+        <a class="pill" href="#"><span class="i">📁</span> Information ▾</a>
+        <a class="pill" href="#"><span class="i">💬</span> Forums</a>
+        <a class="pill" href="#"><span class="i">📊</span> Status</a>
+        <a class="pill" href="#"><span class="i">🕹️</span> Discord</a>
+        <a class="pill" href="#"><span class="i">🎧</span> Support</a>
+        <a class="pill" href="#"><span class="i">🔑</span> My Keys ▾</a>
+        <a class="pill hl" href="#"><span class="i">🔥</span> How to Install? ▾</a>
+      </nav>
+    </div>
   </header>
+
+  <!-- RAIL SOCIAL à droite -->
+  <aside class="social-rail">
+    <a href="#" title="Instagram">📷</a>
+    <a href="#" title="X/Twitter">✖️</a>
+    <a href="#" title="YouTube">▶️</a>
+    <a href="#" title="Discord">💬</a>
+    <a href="#" title="Email">✉️</a>
+    <button class="rail-collapse">›</button>
+  </aside>
 
   <!-- HERO -->
   <section class="hero with-contours">
     <div class="container hero-inner">
-      <h1 class="hero-title">Undetected <span class="grad">Nexium&nbsp;Tools</span><br/>with <span class="grad">24/7</span> Support</h1>
+      <h1 class="hero-title">Undetected Cheats<br><span class="grad">with 24/7 Support</span></h1>
+
       <form class="searchbar" role="search" onsubmit="event.preventDefault();">
         <span class="icon">🔎</span>
-        <input type="search" placeholder="Rechercher un projet, un outil…" aria-label="Rechercher" />
-        <button type="submit" class="btn btn-primary">Rechercher</button>
+        <input type="search" placeholder="Search for cheats..." aria-label="Search" />
+        <button type="submit" class="btn btn-primary">Search</button>
       </form>
 
       <ul class="stats-pills">
-        <li class="pill stat">
-          <span class="stat-icon">📦</span>
-          <div><strong>300&nbsp;000+</strong><small>Downloads</small></div>
-        </li>
-        <li class="pill stat">
-          <span class="stat-icon">⭐</span>
-          <div><strong>5/5</strong><small>Reviews</small></div>
-        </li>
-        <li class="pill stat">
-          <span class="stat-icon">🛡️</span>
-          <div><strong>EVP</strong><small>Trusted</small></div>
-        </li>
+        <li class="pill stat"><span class="stat-icon">🧰</span><div><strong>300,000+</strong><small>successful orders</small></div></li>
+        <li class="pill stat"><span class="stat-icon">⭐</span><div><strong>5/5 from 4,000+</strong><small>reviews</small></div></li>
+        <li class="pill stat"><span class="stat-icon">🛡️</span><div><strong>EVP</strong><small>trusted</small></div></li>
       </ul>
     </div>
   </section>
 
-  <!-- PANNEAUX -->
+  <!-- BLOC INFO LARGE (style PayPal) -->
   <section class="container section">
-    <div class="grid cards-3">
-      <article class="card glass hover-up with-contours --soft">
-        <div class="banner with-contours --soft">
-          <img src="assets/banners/portfolio.jpg" alt="Portfolio Nexium" class="banner-img">
+    <div class="panel huge with-contours --soft">
+      <div class="panel-left">
+        <span class="badge-icon">💳</span>
+        <div>
+          <h3>Buying with PayPal?</h3>
+          <p>To buy with PayPal please join our paypal server and make a ticket.</p>
         </div>
-        <div class="card-body">
-          <h2>Portfolio</h2>
-          <p>Mes créations : addons, maps, UI…</p>
-          <a class="btn btn-textured" data-tex="portfolio" href="portfolio.html">Voir</a>
-        </div>
-      </article>
-
-      <article class="card glass hover-up with-contours --soft">
-        <div class="banner with-contours --soft">
-          <img src="assets/banners/assistant.jpg" alt="Assistance Nexium" class="banner-img">
-        </div>
-        <div class="card-body">
-          <h2>Assistance GMod</h2>
-          <p>Application légère et claire.</p>
-          <a class="btn btn-textured" data-tex="assistant" href="download.html">Télécharger</a>
-        </div>
-      </article>
-
-      <article class="card glass hover-up with-contours --soft">
-        <div class="banner with-contours --soft">
-          <img src="assets/banners/servers.jpg" alt="Serveurs Nexium" class="banner-img">
-        </div>
-        <div class="card-body">
-          <h2>Nos serveurs</h2>
-          <p>Rejoins nos mondes connectés.</p>
-          <a class="btn btn-textured" data-tex="servers" href="servers.html">Découvrir</a>
-        </div>
-      </article>
+      </div>
+      <a class="btn btn-blue">Join Discord</a>
     </div>
   </section>
 
+  <!-- SECTION PRODUITS / CARTES -->
+  <section class="container section">
+    <div class="section-head">
+      <div class="title-with-icon"><span class="twicon">🛒</span><h2>Store Products</h2></div>
+      <span class="count-pill">49 GAMES</span>
+    </div>
+
+    <div class="cards-row">
+      <!-- Cartes vitrées d’exemple (tu remplaceras par tes vignettes) -->
+      <article class="product-card with-contours --soft">
+        <img src="assets/banners/portfolio.jpg" alt="" />
+        <h3>ESCAPE FROM TARKOV</h3>
+      </article>
+      <article class="product-card with-contours --soft">
+        <img src="assets/banners/assistant.jpg" alt="" />
+        <h3>GRAY ZONE</h3>
+      </article>
+      <article class="product-card with-contours --soft">
+        <img src="assets/banners/servers.jpg" alt="" />
+        <h3>THE FINALS</h3>
+      </article>
+      <!-- … duplique autant que nécessaire -->
+    </div>
+  </section>
+
+  <!-- SECTION DISCORD (bloc sombre large) -->
+  <section class="container section">
+    <header class="headline">
+      <h2>Join our Discord<br><span class="grad">for Quick Support</span></h2>
+      <p class="muted">Join our customer-only Discord server for quick support and a growing community.</p>
+    </header>
+
+    <div class="discord-embed with-contours --soft">
+      <div class="discord-embed-inner">
+        <p class="mini-title">JOIN NEXIUM'S DISCORD SERVER</p>
+        <img class="guild-avatar" src="assets/banners/servers.jpg" alt="">
+        <p class="guild-stats"><span class="online-dot"></span>1867 online · 12023 members</p>
+        <h3 class="guild-name">Nexium Community</h3>
+        <p class="invite-note">INVITE NEVER EXPIRES</p>
+        <div class="bottom-strip">You are already member of our Discord server.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="site-footer with-contours --soft">
     <div class="container foot">
       <span>© <span id="year"></span> Nexium</span>
-      <span class="foot-muted">Theme Nexium 95 (authorized look-alike)</span>
     </div>
   </footer>
+
+  <!-- BOUTON CHAT FLOTTANT -->
+  <button class="chat-fab" aria-label="Live chat">💬</button>
 </body>
 </html>
