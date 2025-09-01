@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Téléchargement — Nexium Assistant</title>
+  <meta name="description" content="Télécharge l’assistant Nexium pour Garry's Mod." />
   <link rel="stylesheet" href="styles.css?v=1" />
   <script src="script.js" defer></script>
 </head>
@@ -13,17 +14,25 @@
     <nav class="nav">
       <a href="index.html">Accueil</a>
       <a href="portfolio.html">Portfolio</a>
-      <a href="download.html">Téléchargement</a>
+      <a href="download.html" aria-current="page">Téléchargement</a>
       <a href="servers.html">Nos serveurs</a>
     </nav>
   </header>
 
+  <!-- HERO bannière -->
+  <section class="page-hero" style="--hero:url('assets/banners/assistant.jpg')">
+    <div class="page-hero__inner">
+      <h1>Assistance GMod</h1>
+      <p>Application d’assistance Nexium — légère et claire.</p>
+    </div>
+  </section>
+
   <main class="section">
-    <h1 class="gradient">Téléchargement</h1>
     <article class="card glass">
-      <h2>Nexium Assistant — Windows</h2>
-      <p>Compatible Windows 10/11.</p>
-      <a class="btn btn-primary" href="assets/nexium-assistant.zip">Télécharger (.zip)</a>
+      <h2>Windows</h2>
+      <p>Compatible Windows 10/11 (64-bit).</p>
+      <a class="btn-nexium" href="assets/nexium-assistant.zip">Télécharger (.zip)</a>
+      <p class="muted small">Astuce : renomme le fichier (ex. <code>nexium-assistant-v1-1.zip</code>) à chaque release pour éviter le cache.</p>
     </article>
   </main>
 
