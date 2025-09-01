@@ -3,42 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Télécharger – MonApp</title>
+  <title>Télécharger — Nexium Assistant</title>
+  <meta name="description" content="Télécharge l’assistant Nexium pour Garry’s Mod." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Téléchargez l’application MonApp. Dernière version et notes de version.">
+  <link rel="stylesheet" href="styles.css?v=1" />
 </head>
 <body class="theme-dark">
   <canvas id="stars" aria-hidden="true"></canvas>
+  <div id="planet"></div>
+
   <header class="site-header">
-    <a class="brand" href="index.html">
-      <span class="logo">★</span><span>MonApp</span>
-    </a>
+    <a class="brand" href="index.html"><span class="logo">✦</span><span>Nexium</span></a>
     <nav class="nav">
-      <a href="index.html">Accueil</a>
+      <a href="index.html#projects">Portfolio</a>
+      <a href="index.html#assistant">Assistant</a>
       <a class="btn btn-primary" href="#download">Télécharger</a>
     </nav>
   </header>
 
   <main class="section">
     <h1 class="gradient">Téléchargement</h1>
-    <p class="lead">Choisis ta plateforme, puis lance l’installation.</p>
+    <p class="lead">Choisis ta plateforme. Pour Windows, dézippe puis lance l’installeur.</p>
 
     <div class="grid downloads">
       <article class="card glass">
         <h3>Windows</h3>
-        <p>Compatible Windows 10/11 (64-bits).</p>
-        <a class="btn btn-primary" id="download" href="assets/app.zip">Télécharger .zip</a>
+        <p>Windows 10/11 (64-bit).</p>
+        <a id="download" class="btn btn-primary" href="assets/nexium-assistant.zip">Télécharger (.zip)</a>
       </article>
       <article class="card glass">
-        <h3>macOS</h3>
-        <p>Apple Silicon & Intel.</p>
-        <a class="btn btn-ghost" href="#">Bientôt</a>
-      </article>
-      <article class="card glass">
-        <h3>Android</h3>
-        <p>APK signé (Android 8+).</p>
+        <h3>Autres plateformes</h3>
+        <p>macOS / Linux / Android — en préparation.</p>
         <a class="btn btn-ghost" href="#">Bientôt</a>
       </article>
     </div>
@@ -46,39 +42,36 @@
     <div class="release card">
       <h2>Notes de version</h2>
       <ul>
-        <li><strong>v1.0.0</strong> — Première version publique : assistance, diagnostic rapide, thèmes.</li>
+        <li><strong>v1.0.0</strong> — Première release publique : guides, checklists, outils de confort.</li>
       </ul>
-      <p class="muted">Besoin d’aide ? Écris-nous : <a href="mailto:contact@exemple.com">contact@exemple.com</a></p>
+      <p class="muted">Un problème ? Écris à <a href="mailto:contact@nexium.gg">contact@nexium.gg</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Conseils</h3>
+      <ul>
+        <li>Vérifie l’empreinte du fichier si besoin (SHA-256).</li>
+        <li>Pour forcer l’actualisation lors d’une mise à jour : renomme le fichier (ex. <code>nexium-assistant-v1-1.zip</code>) et mets à jour ce lien.</li>
+      </ul>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="footer-grid">
-      <div class="brand"><span class="logo">★</span><span>MonApp</span></div>
-      <p class="muted">© <span id="year"></span> MonApp</p>
+      <div class="brand"><span class="logo">✦</span><span>Nexium</span></div>
+      <p class="muted">© <span id="year"></span> Nexium</p>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    // réutilise le fond étoilé de index.html
+
+    // même fond animé
     const c = document.getElementById('stars');
     const ctx = c.getContext('2d');
-    function size(){ c.width = innerWidth; c.height = innerHeight; }
-    size(); addEventListener('resize', size);
-    const stars = Array.from({length: 140}, () => ({
-      x: Math.random()*c.width, y: Math.random()*c.height,
-      r: Math.random()*1.8+0.2, s: Math.random()*0.6+0.2
-    }));
-    (function loop(){
-      ctx.clearRect(0,0,c.width,c.height);
-      for (const st of stars){
-        st.x += st.s*0.1; if (st.x>c.width) st.x=0;
-        ctx.beginPath(); ctx.arc(st.x, st.y, st.r, 0, Math.PI*2);
-        ctx.fillStyle = 'rgba(255,255,255,0.8)'; ctx.fill();
-      }
-      requestAnimationFrame(loop);
-    })();
+    function rs(){ c.width=innerWidth; c.height=innerHeight; } addEventListener('resize', rs); rs();
+    const stars = Array.from({length: 150}, () => ({x:Math.random()*c.width, y:Math.random()*c.height, r:Math.random()*1.5+.2, s:Math.random()*.4+.2}));
+    (function loop(){ ctx.clearRect(0,0,c.width,c.height); for(const s of stars){ s.x+=s.s*.12; if(s.x>c.width)s.x=0; ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2); ctx.fillStyle='rgba(255,255,255,.85)'; ctx.fill(); } requestAnimationFrame(loop); })();
   </script>
 </body>
 </html>
