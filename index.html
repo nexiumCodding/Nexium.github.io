@@ -6,15 +6,15 @@
   <title>Nexium — Accueil</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4" />
-  <script src="script.js?v=4" defer></script>
+  <link rel="stylesheet" href="styles.css?v=5" />
+  <script src="script.js?v=5" defer></script>
 </head>
 <body>
   <!-- NAV -->
   <header class="site-header with-contours --soft">
     <div class="container nav-wrap">
       <a class="brand" href="index.html">
-        <span class="brand-logo">✦</span> <span class="brand-text">Nexium</span>
+        <span class="brand-logo">✦</span><span class="brand-text">Nexium</span>
       </a>
       <nav class="nav">
         <a href="index.html" aria-current="page">Accueil</a>
@@ -25,27 +25,36 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO avec recherche + badges -->
   <section class="hero with-contours">
     <div class="container hero-inner">
-      <p class="eyebrow">Univers galaxie · violet & cyan</p>
-      <h1>Bienvenue dans <span class="grad">l’univers Nexium</span></h1>
-      <p class="subhead">Portfolio, Assistance Garry’s Mod & Nos serveurs — design pro, rapide et clair.</p>
+      <h1>Outils et créations <span class="grad">Nexium</span></h1>
+      <p class="subhead">Assistance GMod • Portfolio • Serveurs — design galaxie/néon.</p>
 
-      <div class="actions">
-        <a class="btn btn-nx --assistant with-contours --tight --soft" href="download.html">Télécharger</a>
-        <a class="btn btn-ghost" href="portfolio.html">Voir le portfolio</a>
-      </div>
+      <form class="searchbar" role="search" onsubmit="event.preventDefault();">
+        <span class="icon">🔎</span>
+        <input type="search" placeholder="Rechercher un projet, un outil…" aria-label="Rechercher" />
+        <button type="submit" class="btn btn-nx --assistant with-contours --tight --soft">Rechercher</button>
+      </form>
 
-      <ul class="stats">
-        <li><strong>+3</strong><span>projets actifs</span></li>
-        <li><strong>24/7</strong><span>support mail</span></li>
-        <li><strong>100%</strong><span>gratuit</span></li>
+      <ul class="badges">
+        <li class="badge">
+          <span class="badge-icon">🛠️</span>
+          <div><strong>3+</strong><small>projets actifs</small></div>
+        </li>
+        <li class="badge">
+          <span class="badge-icon">⭐</span>
+          <div><strong>Qualité</strong><small>design & perf</small></div>
+        </li>
+        <li class="badge">
+          <span class="badge-icon">🛡️</span>
+          <div><strong>Sécurisé</strong><small>fichiers vérifiés</small></div>
+        </li>
       </ul>
     </div>
   </section>
 
-  <!-- 3 CARTES -->
+  <!-- Panneaux -->
   <section class="container section">
     <div class="grid cards-3">
       <article class="card glass hover-up with-contours --soft">
@@ -65,7 +74,7 @@
         </div>
         <div class="card-body">
           <h2>Assistance GMod</h2>
-          <p>Application légère, claire, pensée pour aider.</p>
+          <p>Application légère et claire.</p>
           <a class="btn btn-nx --assistant with-contours --tight --soft" href="download.html">Télécharger</a>
         </div>
       </article>
@@ -76,7 +85,7 @@
         </div>
         <div class="card-body">
           <h2>Nos serveurs</h2>
-          <p>Rejoins nos mondes Garry’s Mod connectés.</p>
+          <p>Rejoins nos mondes connectés.</p>
           <a class="btn btn-nx --servers with-contours --tight --soft" href="servers.html">Découvrir</a>
         </div>
       </article>
@@ -86,7 +95,7 @@
   <footer class="site-footer with-contours --soft">
     <div class="container foot">
       <span>© <span id="year"></span> Nexium</span>
-      <span class="foot-muted">Design thème galaxie par Nexium</span>
+      <span class="foot-muted">Thème “Nebula” inspiré, non affilié.</span>
     </div>
   </footer>
 </body>
