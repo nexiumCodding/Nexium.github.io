@@ -3,75 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Télécharger — Nexium Assistant</title>
-  <meta name="description" content="Télécharge l’assistant Nexium pour Garry’s Mod." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Téléchargement — Nexium Assistant</title>
   <link rel="stylesheet" href="styles.css?v=1" />
 </head>
-<body class="theme-dark">
-  <canvas id="stars" aria-hidden="true"></canvas>
-  <div id="planet"></div>
-
+<body>
+  <!-- Menu -->
   <header class="site-header">
     <a class="brand" href="index.html"><span class="logo">✦</span><span>Nexium</span></a>
     <nav class="nav">
-      <a href="index.html#projects">Portfolio</a>
-      <a href="index.html#assistant">Assistant</a>
-      <a class="btn btn-primary" href="#download">Télécharger</a>
+      <a href="index.html">Accueil</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="download.html">Téléchargement</a>
+      <a href="servers.html">Nos serveurs</a>
     </nav>
   </header>
 
   <main class="section">
-    <h1 class="gradient">Téléchargement</h1>
-    <p class="lead">Choisis ta plateforme. Pour Windows, dézippe puis lance l’installeur.</p>
+    <h1 class="gradient">Télécharger l’assistant Nexium</h1>
+    <p class="lead">Assistant gratuit pour Garry’s Mod — version 1.0</p>
 
-    <div class="grid downloads">
-      <article class="card glass">
-        <h3>Windows</h3>
-        <p>Windows 10/11 (64-bit).</p>
-        <a id="download" class="btn btn-primary" href="assets/nexium-assistant.zip">Télécharger (.zip)</a>
-      </article>
-      <article class="card glass">
-        <h3>Autres plateformes</h3>
-        <p>macOS / Linux / Android — en préparation.</p>
-        <a class="btn btn-ghost" href="#">Bientôt</a>
-      </article>
-    </div>
-
-    <div class="release card">
-      <h2>Notes de version</h2>
-      <ul>
-        <li><strong>v1.0.0</strong> — Première release publique : guides, checklists, outils de confort.</li>
-      </ul>
-      <p class="muted">Un problème ? Écris à <a href="mailto:contact@nexium.gg">contact@nexium.gg</a></p>
-    </div>
-
-    <div class="card">
-      <h3>Conseils</h3>
-      <ul>
-        <li>Vérifie l’empreinte du fichier si besoin (SHA-256).</li>
-        <li>Pour forcer l’actualisation lors d’une mise à jour : renomme le fichier (ex. <code>nexium-assistant-v1-1.zip</code>) et mets à jour ce lien.</li>
-      </ul>
-    </div>
+    <article class="card glass">
+      <h2>Windows</h2>
+      <p>Compatible Windows 10/11.</p>
+      <a class="btn btn-primary" href="assets/nexium-assistant.zip">Télécharger (.zip)</a>
+    </article>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-grid">
-      <div class="brand"><span class="logo">✦</span><span>Nexium</span></div>
-      <p class="muted">© <span id="year"></span> Nexium</p>
-    </div>
+    <p>© <span id="year"></span> Nexium</p>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // même fond animé
-    const c = document.getElementById('stars');
-    const ctx = c.getContext('2d');
-    function rs(){ c.width=innerWidth; c.height=innerHeight; } addEventListener('resize', rs); rs();
-    const stars = Array.from({length: 150}, () => ({x:Math.random()*c.width, y:Math.random()*c.height, r:Math.random()*1.5+.2, s:Math.random()*.4+.2}));
-    (function loop(){ ctx.clearRect(0,0,c.width,c.height); for(const s of stars){ s.x+=s.s*.12; if(s.x>c.width)s.x=0; ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2); ctx.fillStyle='rgba(255,255,255,.85)'; ctx.fill(); } requestAnimationFrame(loop); })();
-  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
