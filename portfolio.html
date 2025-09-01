@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio — Nexium</title>
   <link rel="stylesheet" href="styles.css?v=1" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Menu -->
   <header class="site-header">
     <a class="brand" href="index.html"><span class="logo">✦</span><span>Nexium</span></a>
     <nav class="nav">
@@ -19,35 +19,13 @@
   </header>
 
   <main class="section">
-    <h1>Mon Portfolio</h1>
-    <p class="lead">Chaque image ajoutée dans <code>/assets/portfolio/</code> apparaîtra ci-dessous.</p>
+    <h1 class="gradient">Portfolio</h1>
+    <p class="lead">Ajoute simplement tes images dans <code>assets/portfolio/</code> et <code>portfolio.json</code> pour les afficher ici.</p>
     <div id="gallery" class="grid gallery"></div>
   </main>
 
   <footer class="site-footer">
     <p>© <span id="year"></span> Nexium</p>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Liste manuelle des images (mets ici les noms de tes fichiers)
-    const images = [
-      "assets/portfolio/img1.jpg",
-      "assets/portfolio/img2.png",
-      "assets/portfolio/img3.jpg"
-    ];
-
-    const gallery = document.getElementById("gallery");
-    images.forEach(src => {
-      const fig = document.createElement("figure");
-      fig.className = "card glass";
-      const img = document.createElement("img");
-      img.src = src;
-      img.alt = "Projet Nexium";
-      fig.appendChild(img);
-      gallery.appendChild(fig);
-    });
-  </script>
 </body>
 </html>
