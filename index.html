@@ -3,18 +3,208 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mon site GitHub Pages</title>
-  <style>
-    body{font-family:system-ui,Arial,sans-serif;max-width:900px;margin:40px auto;padding:0 16px;line-height:1.6}
-    header,footer{border-bottom:1px solid #eee;padding-bottom:12px;margin-bottom:24px}
-    a.btn{display:inline-block;padding:10px 16px;border:1px solid #222;border-radius:8px;text-decoration:none}
-  </style>
+  <title>Mon Application – Assistance rapide & moderne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Application d’assistance — support 24/7, rapide et sûre. Téléchargez gratuitement.">
 </head>
-<body>
-  <header><h1>Bienvenue 👋</h1></header>
-  <p>Ceci est mon site hébergé gratuitement sur GitHub Pages.</p>
-  <p><a class="btn" href="mailto:ton.email@example.com">Me contacter</a></p>
-  <footer><small>© <span id="y"></span> Ton Nom</small></footer>
-  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+<body class="theme-dark">
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="logo">★</span><span>MonApp</span>
+    </a>
+    <nav class="nav">
+      <a href="#features">Fonctionnalités</a>
+      <a href="#screens">Aperçu</a>
+      <a class="btn btn-primary" href="download.html">Télécharger</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__inner">
+        <h1 class="gradient">Assistance <span class="nowrap">ultra-rapide</span> avec support 24/7</h1>
+        <p class="lead">Une application légère, sécurisée, pensée pour t’aider en quelques clics.</p>
+        <div class="cta">
+          <a class="btn btn-primary lg" href="download.html">Télécharger maintenant</a>
+          <a class="btn btn-ghost lg" href="#features">Découvrir</a>
+        </div>
+        <ul class="stats">
+          <li><strong>+3000</strong><span>utilisateurs</span></li>
+          <li><strong>4.9/5</strong><span>avis</span></li>
+          <li><strong>100%</strong><span>gratuit</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section">
+      <h2>Fonctionnalités clés</h2>
+      <div class="grid">
+        <article class="card glass">
+          <h3>Assistance en temps réel</h3>
+          <p>Diagnostique automatique et recommandations instantanées.</p>
+        </article>
+        <article class="card glass">
+          <h3>Interface intuitive</h3>
+          <p>Design clair, accessible, et pensé mobile-first.</p>
+        </article>
+        <article class="card glass">
+          <h3>Léger & sécurisé</h3>
+          <p>Mises à jour fréquentes, chiffrement des échanges.</p>
+        </article>
+        <article class="card glass">
+          <h3>Personnalisable</h3>
+          <p>Thèmes, modules optionnels et raccourcis.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SCREENS -->
+    <section id="screens" class="section">
+      <h2>Aperçu de l’application</h2>
+      <div class="grid screenshots">
+        <figure class="shot"><img src="https://picsum.photos/seed/app1/900/520" alt="Capture 1 de l’application"></figure>
+        <figure class="shot"><img src="https://picsum.photos/seed/app2/900/520" alt="Capture 2 de l’application"></figure>
+        <figure class="shot"><img src="https://picsum.photos/seed/app3/900/520" alt="Capture 3 de l’application"></figure>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="banner">
+      <h3>Prêt à commencer ?</h3>
+      <a class="btn btn-primary lg" href="download.html">Télécharger gratuitement</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <div class="brand"><span class="logo">★</span><span>MonApp</span></div>
+        <p class="muted">Une app d’assistance rapide et fiable.</p>
+      </div>
+      <nav>
+        <strong>Navigation</strong>
+        <a href="index.html">Accueil</a>
+        <a href="download.html">Téléchargement</a>
+      </nav>
+      <div>
+        <strong>Contact</strong>
+        <a href="mailto:contact@exemple.com">contact@exemple.com</a>
+        <p class="muted">© <span id="year"></span> MonApp</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // année
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // petit fond d'étoiles animé (canvas)
+    const c = document.getElementById('stars');
+    const ctx = c.getContext('2d');
+    function size(){ c.width = innerWidth; c.height = innerHeight; }
+    size(); addEventListener('resize', size);
+    const stars = Array.from({length: 150}, () => ({
+      x: Math.random()*c.width, y: Math.random()*c.height,
+      r: Math.random()*1.8+0.2, s: Math.random()*0.6+0.2
+    }));
+    (function loop(){
+      ctx.clearRect(0,0,c.width,c.height);
+      for (const st of stars){
+        st.x += st.s*0.1; if (st.x>c.width) st.x=0;
+        ctx.beginPath(); ctx.arc(st.x, st.y, st.r, 0, Math.PI*2);
+        ctx.fillStyle = 'rgba(255,255,255,0.8)'; ctx.fill();
+      }
+      requestAnimationFrame(loop);
+    })();
+  </script>
+</body>
+</html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Télécharger – MonApp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Téléchargez l’application MonApp. Dernière version et notes de version.">
+</head>
+<body class="theme-dark">
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="logo">★</span><span>MonApp</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a class="btn btn-primary" href="#download">Télécharger</a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h1 class="gradient">Téléchargement</h1>
+    <p class="lead">Choisis ta plateforme, puis lance l’installation.</p>
+
+    <div class="grid downloads">
+      <article class="card glass">
+        <h3>Windows</h3>
+        <p>Compatible Windows 10/11 (64-bits).</p>
+        <a class="btn btn-primary" id="download" href="assets/app.zip">Télécharger .zip</a>
+      </article>
+      <article class="card glass">
+        <h3>macOS</h3>
+        <p>Apple Silicon & Intel.</p>
+        <a class="btn btn-ghost" href="#">Bientôt</a>
+      </article>
+      <article class="card glass">
+        <h3>Android</h3>
+        <p>APK signé (Android 8+).</p>
+        <a class="btn btn-ghost" href="#">Bientôt</a>
+      </article>
+    </div>
+
+    <div class="release card">
+      <h2>Notes de version</h2>
+      <ul>
+        <li><strong>v1.0.0</strong> — Première version publique : assistance, diagnostic rapide, thèmes.</li>
+      </ul>
+      <p class="muted">Besoin d’aide ? Écris-nous : <a href="mailto:contact@exemple.com">contact@exemple.com</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="brand"><span class="logo">★</span><span>MonApp</span></div>
+      <p class="muted">© <span id="year"></span> MonApp</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // réutilise le fond étoilé de index.html
+    const c = document.getElementById('stars');
+    const ctx = c.getContext('2d');
+    function size(){ c.width = innerWidth; c.height = innerHeight; }
+    size(); addEventListener('resize', size);
+    const stars = Array.from({length: 140}, () => ({
+      x: Math.random()*c.width, y: Math.random()*c.height,
+      r: Math.random()*1.8+0.2, s: Math.random()*0.6+0.2
+    }));
+    (function loop(){
+      ctx.clearRect(0,0,c.width,c.height);
+      for (const st of stars){
+        st.x += st.s*0.1; if (st.x>c.width) st.x=0;
+        ctx.beginPath(); ctx.arc(st.x, st.y, st.r, 0, Math.PI*2);
+        ctx.fillStyle = 'rgba(255,255,255,0.8)'; ctx.fill();
+      }
+      requestAnimationFrame(loop);
+    })();
+  </script>
 </body>
 </html>
