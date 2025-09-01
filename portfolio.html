@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Nexium</title>
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Menu -->
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="logo">✦</span><span>Nexium</span></a>
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="download.html">Téléchargement</a>
+      <a href="servers.html">Nos serveurs</a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h1>Mon Portfolio</h1>
+    <p class="lead">Chaque image ajoutée dans <code>/assets/portfolio/</code> apparaîtra ci-dessous.</p>
+    <div id="gallery" class="grid gallery"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Nexium</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Liste manuelle des images (mets ici les noms de tes fichiers)
+    const images = [
+      "assets/portfolio/img1.jpg",
+      "assets/portfolio/img2.png",
+      "assets/portfolio/img3.jpg"
+    ];
+
+    const gallery = document.getElementById("gallery");
+    images.forEach(src => {
+      const fig = document.createElement("figure");
+      fig.className = "card glass";
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = "Projet Nexium";
+      fig.appendChild(img);
+      gallery.appendChild(fig);
+    });
+  </script>
+</body>
+</html>
