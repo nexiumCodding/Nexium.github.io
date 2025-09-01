@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
 
-  // Portfolio dynamique
+  // Portfolio
   const gallery = document.getElementById("gallery");
   if (gallery) {
-    fetch("portfolio.json?v=4")
+    fetch("portfolio.json?v=5")
       .then(r => r.json())
       .then(items => {
         if (!Array.isArray(items) || !items.length) {
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(() => (gallery.innerHTML = "<p>Impossible de charger le portfolio.</p>"));
   }
 
-  // Copie IP (serveurs)
+  // Copier IP
   document.querySelectorAll(".copy-ip").forEach(btn => {
     btn.addEventListener("click", e => {
       e.preventDefault();
