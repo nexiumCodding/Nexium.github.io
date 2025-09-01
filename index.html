@@ -3,98 +3,128 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mon Application – Assistance rapide & moderne</title>
+  <title>Nexium — Portfolio & Assistant Garry's Mod</title>
+  <meta name="description" content="Nexium — Portfolio et application d’assistance pour Garry's Mod. Univers spatial, étoiles et planètes." />
+  <meta property="og:title" content="Nexium — Portfolio & Assistant GMod" />
+  <meta property="og:description" content="Découvre mes projets et télécharge l’assistant Nexium pour Garry's Mod." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3CradialGradient id='g'%3E%3Cstop offset='0' stop-color='%23b174ff'/%3E%3Cstop offset='1' stop-color='%23080b14'/%3E%3C/rg%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='48' fill='url(%23g)'/%3E%3Ctext x='50' y='60' font-size='50' text-anchor='middle' fill='white' font-family='Poppins,sans-serif'%3EN%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Application d’assistance — support 24/7, rapide et sûre. Téléchargez gratuitement.">
+  <link rel="stylesheet" href="styles.css?v=1" />
 </head>
 <body class="theme-dark">
+  <!-- Fond animé -->
   <canvas id="stars" aria-hidden="true"></canvas>
+  <div id="planet"></div>
+
   <header class="site-header">
-    <a class="brand" href="index.html">
-      <span class="logo">★</span><span>MonApp</span>
+    <a class="brand" href="#top">
+      <span class="logo">✦</span><span>Nexium</span>
     </a>
     <nav class="nav">
-      <a href="#features">Fonctionnalités</a>
-      <a href="#screens">Aperçu</a>
+      <a href="#projects">Portfolio</a>
+      <a href="#assistant">Assistant GMod</a>
+      <a href="#about">À propos</a>
       <a class="btn btn-primary" href="download.html">Télécharger</a>
     </nav>
   </header>
 
-  <main>
+  <main id="top">
     <!-- HERO -->
     <section class="hero">
       <div class="hero__inner">
-        <h1 class="gradient">Assistance <span class="nowrap">ultra-rapide</span> avec support 24/7</h1>
-        <p class="lead">Une application légère, sécurisée, pensée pour t’aider en quelques clics.</p>
+        <h1 class="gradient">Nexium<span class="nowrap"> · dans la galaxie</span></h1>
+        <p class="lead">Création de projets autour du jeu & des outils. Découvre mon univers et mon <strong>assistant pour Garry’s Mod</strong>.</p>
         <div class="cta">
-          <a class="btn btn-primary lg" href="download.html">Télécharger maintenant</a>
-          <a class="btn btn-ghost lg" href="#features">Découvrir</a>
+          <a class="btn btn-primary lg" href="download.html">Télécharger l’assistant</a>
+          <a class="btn btn-ghost lg" href="#projects">Voir le portfolio</a>
         </div>
         <ul class="stats">
-          <li><strong>+3000</strong><span>utilisateurs</span></li>
-          <li><strong>4.9/5</strong><span>avis</span></li>
+          <li><strong>+3</strong><span>projets actifs</span></li>
+          <li><strong>24/7</strong><span>support mail</span></li>
           <li><strong>100%</strong><span>gratuit</span></li>
         </ul>
       </div>
     </section>
 
-    <!-- FEATURES -->
-    <section id="features" class="section">
-      <h2>Fonctionnalités clés</h2>
+    <!-- PORTFOLIO -->
+    <section id="projects" class="section">
+      <h2>Portfolio</h2>
+      <div class="grid cards-portfolio">
+        <article class="card glass">
+          <img class="thumb" src="https://picsum.photos/seed/nx1/900/520" alt="Projet 1">
+          <h3>Addon HUD minimal (GMod)</h3>
+          <p>HUD épuré, optimisé client, couleurs adaptatives.</p>
+          <div class="tags"><span>Lua</span><span>UI</span><span>Garry’s Mod</span></div>
+        </article>
+        <article class="card glass">
+          <img class="thumb" src="https://picsum.photos/seed/nx2/900/520" alt="Projet 2">
+          <h3>Map utilitaire — Training</h3>
+          <p>Petite map d’entraînement avec cibles et timers.</p>
+          <div class="tags"><span>Level Design</span><span>Hammer</span></div>
+        </article>
+        <article class="card glass">
+          <img class="thumb" src="https://picsum.photos/seed/nx3/900/520" alt="Projet 3">
+          <h3>Site vitrine Nexium</h3>
+          <p>Ce site GitHub Pages — thème galaxie, planètes et néons.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>GitHub Pages</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ASSISTANT -->
+    <section id="assistant" class="section">
+      <h2>Assistant Nexium pour Garry’s Mod</h2>
       <div class="grid">
-        <article class="card glass">
-          <h3>Assistance en temps réel</h3>
-          <p>Diagnostique automatique et recommandations instantanées.</p>
+        <article class="card">
+          <h3>Ce que fait l’assistant</h3>
+          <ul>
+            <li>Guides rapides en jeu (commandes, binds utiles).</li>
+            <li>Outils pratiques (nettoyage cfg, vérif d’addons, aide clavier/souris).</li>
+            <li>Notes & checklists faciles à retrouver.</li>
+          </ul>
+          <a class="btn btn-primary" href="download.html">Télécharger</a>
         </article>
         <article class="card glass">
-          <h3>Interface intuitive</h3>
-          <p>Design clair, accessible, et pensé mobile-first.</p>
-        </article>
-        <article class="card glass">
-          <h3>Léger & sécurisé</h3>
-          <p>Mises à jour fréquentes, chiffrement des échanges.</p>
-        </article>
-        <article class="card glass">
-          <h3>Personnalisable</h3>
-          <p>Thèmes, modules optionnels et raccourcis.</p>
+          <h3>Pourquoi Nexium ?</h3>
+          <p>L’univers Nexium reflète la <em>galaxie</em> : <strong>exploration</strong>, <strong>clarté</strong>, <strong>performance</strong>. Pas d’exploitation injuste du jeu : l’outil est pensé pour rester fair-play.</p>
+          <div class="badges"><span>Gratuit</span><span>Sans pub</span><span>Open config</span></div>
         </article>
       </div>
     </section>
 
-    <!-- SCREENS -->
-    <section id="screens" class="section">
-      <h2>Aperçu de l’application</h2>
-      <div class="grid screenshots">
-        <figure class="shot"><img src="https://picsum.photos/seed/app1/900/520" alt="Capture 1 de l’application"></figure>
-        <figure class="shot"><img src="https://picsum.photos/seed/app2/900/520" alt="Capture 2 de l’application"></figure>
-        <figure class="shot"><img src="https://picsum.photos/seed/app3/900/520" alt="Capture 3 de l’application"></figure>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>À propos</h2>
+      <p>Je suis <strong>Nexium</strong>, passionné par les outils pour joueurs et l’UX minimaliste. Mon but : rendre l’expérience de jeu plus fluide, sans tricherie ni déséquilibre.</p>
+      <div class="card">
+        <h3>Contact</h3>
+        <p>Mail : <a href="mailto:contact@nexium.gg">contact@nexium.gg</a></p>
       </div>
     </section>
 
-    <!-- CTA BANNER -->
+    <!-- CTA -->
     <section class="banner">
-      <h3>Prêt à commencer ?</h3>
-      <a class="btn btn-primary lg" href="download.html">Télécharger gratuitement</a>
+      <h3>Prêt à explorer ?</h3>
+      <a class="btn btn-primary lg" href="download.html">Télécharger l’assistant Nexium</a>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-grid">
       <div>
-        <div class="brand"><span class="logo">★</span><span>MonApp</span></div>
-        <p class="muted">Une app d’assistance rapide et fiable.</p>
+        <div class="brand"><span class="logo">✦</span><span>Nexium</span></div>
+        <p class="muted">Univers spatial — étoiles, planètes et performance.</p>
       </div>
       <nav>
         <strong>Navigation</strong>
-        <a href="index.html">Accueil</a>
+        <a href="#projects">Portfolio</a>
         <a href="download.html">Téléchargement</a>
       </nav>
       <div>
-        <strong>Contact</strong>
-        <a href="mailto:contact@exemple.com">contact@exemple.com</a>
-        <p class="muted">© <span id="year"></span> MonApp</p>
+        <strong>Mentions</strong>
+        <p class="muted">© <span id="year"></span> Nexium</p>
       </div>
     </div>
   </footer>
@@ -103,21 +133,25 @@
     // année
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // petit fond d'étoiles animé (canvas)
-    const c = document.getElementById('stars');
-    const ctx = c.getContext('2d');
-    function size(){ c.width = innerWidth; c.height = innerHeight; }
-    size(); addEventListener('resize', size);
-    const stars = Array.from({length: 150}, () => ({
-      x: Math.random()*c.width, y: Math.random()*c.height,
-      r: Math.random()*1.8+0.2, s: Math.random()*0.6+0.2
+    // fond étoilé + lente planète
+    const canvas = document.getElementById('stars');
+    const ctx = canvas.getContext('2d');
+    function resize(){ canvas.width=innerWidth; canvas.height=innerHeight; }
+    addEventListener('resize', resize); resize();
+
+    const stars = Array.from({length: 160}, () => ({
+      x: Math.random()*canvas.width,
+      y: Math.random()*canvas.height,
+      r: Math.random()*1.6+0.2,
+      s: Math.random()*0.4+0.2
     }));
+
     (function loop(){
-      ctx.clearRect(0,0,c.width,c.height);
-      for (const st of stars){
-        st.x += st.s*0.1; if (st.x>c.width) st.x=0;
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      for(const st of stars){
+        st.x += st.s*0.12; if(st.x>canvas.width) st.x = 0;
         ctx.beginPath(); ctx.arc(st.x, st.y, st.r, 0, Math.PI*2);
-        ctx.fillStyle = 'rgba(255,255,255,0.8)'; ctx.fill();
+        ctx.fillStyle = 'rgba(255,255,255,0.85)'; ctx.fill();
       }
       requestAnimationFrame(loop);
     })();
