@@ -1,0 +1,5 @@
+[
+  { "name": "Sandbox #1", "ip": "123.45.67.89:27015", "status": "online",  "note": "Ping 24ms" },
+  { "name": "DarkRP #1",  "ip": "123.45.67.89:27016", "status": "updating","note": "Maintenance 10min" },
+  { "name": "TTT #EU",    "ip": "123.45.67.89:27017", "status": "offline", "note": "Reboot" }
+]
