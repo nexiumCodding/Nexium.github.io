@@ -1,9 +1,10 @@
 <!doctype html><html lang="fr"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Nexium — Compte</title>
-<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="styles.css?v=9">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head><body>
-  <header class="site-header with-contours --soft">…</header>
+  <header class="site-header with-contours --soft">… (même header que les autres pages) …</header>
 
   <section class="container section">
     <div class="grid cards-2">
@@ -14,15 +15,21 @@
           <input id="loginPass" type="password" placeholder="Mot de passe" required />
           <button class="btn btn-primary">Se connecter</button>
         </form>
+        <div style="margin:12px 0;border-top:1px solid rgba(255,255,255,.08)"></div>
+        <button class="btn btn-blue" id="btnDiscordLogin">Se connecter avec Discord</button>
+        <p class="muted small">Plus rapide et sans mot de passe.</p>
       </div></div>
 
       <div class="card glass with-contours --soft"><div class="card-body">
-        <h2>Créer un compte</h2>
+        <h2>Créer un compte (email)</h2>
         <form id="registerForm" class="grid" style="grid-template-columns:1fr;">
           <input id="regEmail" type="email" placeholder="Email" required />
           <input id="regPass" type="password" placeholder="Mot de passe (min 6)" required />
           <button class="btn btn-primary">S’inscrire</button>
         </form>
+        <div style="margin:12px 0;border-top:1px solid rgba(255,255,255,.08)"></div>
+        <button class="btn btn-blue" id="btnDiscordSignup">Créer avec Discord</button>
+        <p class="muted small">On utilisera ton compte Discord.</p>
       </div></div>
     </div>
   </section>
@@ -32,19 +39,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
   <script>
-    // TODO: mets la même config que dans app.js
-    const firebaseConfig = { /* YOUR_FIREBASE_CONFIG */ };
-    firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
-    document.getElementById('loginForm').addEventListener('submit', async e=>{
-      e.preventDefault();
-      await auth.signInWithEmailAndPassword(loginEmail.value, loginPass.value).catch(err=>alert(err.message));
-      location.href = 'index.html';
-    });
-    document.getElementById('registerForm').addEventListener('submit', async e=>{
-      e.preventDefault();
-      await auth.createUserWithEmailAndPassword(regEmail.value, regPass.value).catch(err=>alert(err.message));
-      location.href = 'index.html';
-    });
+    // NOTE: ce fichier reste minimal. Tout est géré dans app.js (handlers Discord inclus).
   </script>
+  <script src="app.js?v=2"></script>
 </body></html>
