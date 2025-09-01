@@ -1,0 +1,23 @@
+<!doctype html><html lang="fr"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nexium — Connexion Discord</title>
+<link rel="stylesheet" href="styles.css?v=9">
+</head><body class="with-contours --soft">
+  <div class="container section">
+    <div class="card glass with-contours --soft"><div class="card-body">
+      <h2>Connexion en cours…</h2>
+      <p class="muted">Nous validons ton compte Discord et te connectons à Nexium.</p>
+    </div></div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+  <script src="app.js?v=2"></script>
+  <script>
+    // Le traitement est dans app.js (handleOAuthCallback)
+    window.NEXIUM_OAUTH_CALLBACK && window.NEXIUM_OAUTH_CALLBACK();
+  </script>
+</body></html>
