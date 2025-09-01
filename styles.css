@@ -1,58 +1,71 @@
 :root{
-  --bg:#08080b;
-  --panel:#101018;
+  --bg:#070810;
+  --panel:#0e1020;
   --glass:rgba(255,255,255,.06);
-  --text:#eaeaf7;
-  --muted:#9aa0b4;
-  --primary:#b174ff; /* néon violet */
-  --primary-2:#7a3cff;
-  --ring:0 0 40px rgba(122,60,255,.35), 0 0 80px rgba(177,116,255,.15);
+  --text:#e9ebff;
+  --muted:#9aa3c0;
+  --primary:#b174ff;     /* violet néon Nexium */
+  --accent:#56c2ff;      /* bleu étoile */
+  --ring:0 0 40px rgba(122,60,255,.35), 0 0 90px rgba(86,194,255,.15);
   --radius:16px;
 }
 *{box-sizing:border-box}
 html,body{height:100%}
-body{margin:0;background:radial-gradient(1200px 600px at 70% -10%, #2a0a4a 0%, transparent 60%), var(--bg); color:var(--text); font:16px/1.6 "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;}
+body{margin:0;background:
+  radial-gradient(1200px 600px at 70% -10%, rgba(122,60,255,.20), transparent 60%),
+  radial-gradient(900px 500px at 5% 90%, rgba(86,194,255,.10), transparent 60%),
+  var(--bg);
+  color:var(--text);
+  font:16px/1.6 "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
 
-/* Stars canvas full-bleed */
-#stars{position:fixed; inset:0; z-index:-1;}
+/* Planète décorative */
+#planet{position:fixed; right:-140px; top:20%; width:360px; height:360px; border-radius:50%;
+  background:radial-gradient(circle at 35% 35%, rgba(255,255,255,.6), rgba(177,116,255,.8) 25%, rgba(12,16,40,.8) 60%, rgba(8,10,16,0) 70%);
+  filter:blur(0.3px) saturate(120%); box-shadow:0 0 120px rgba(177,116,255,.25); z-index:-1}
+
+/* Canvas étoiles */
+#stars{position:fixed; inset:0; z-index:-2}
 
 /* Header */
-.site-header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(12px); background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0)); padding:14px 20px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,.06)}
+.site-header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(12px);
+  background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0)); padding:14px 20px;
+  display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,.06)}
 .brand{display:flex; align-items:center; gap:10px; font-weight:700; text-decoration:none; color:var(--text)}
-.logo{display:inline-grid; place-items:center; width:28px; height:28px; border-radius:8px; background:linear-gradient(135deg, var(--primary), var(--primary-2)); box-shadow:var(--ring)}
+.logo{display:inline-grid; place-items:center; width:28px; height:28px; border-radius:8px; background:linear-gradient(135deg, var(--primary), var(--accent)); box-shadow:var(--ring)}
 .nav{display:flex; gap:18px; align-items:center}
 .nav a{color:var(--text); text-decoration:none; opacity:.9}
 .nav a:hover{opacity:1}
 
 /* Buttons */
-.btn{display:inline-block; border:1px solid rgba(255,255,255,.15); border-radius:12px; padding:10px 16px; text-decoration:none; transition:.2s transform, .2s box-shadow, .2s background;}
+.btn{display:inline-block; border:1px solid rgba(255,255,255,.14); border-radius:12px; padding:10px 16px; text-decoration:none; transition:.2s transform, .2s box-shadow, .2s background}
 .btn:hover{transform:translateY(-1px)}
-.btn-primary{background:linear-gradient(135deg, var(--primary), var(--primary-2)); color:white; box-shadow:var(--ring)}
+.btn-primary{background:linear-gradient(135deg, var(--primary), var(--accent)); color:white; box-shadow:var(--ring)}
 .btn-ghost{background:transparent; color:var(--text)}
 .btn.lg{padding:14px 22px; border-radius:14px; font-weight:600}
 
 /* Hero */
 .hero{padding:90px 20px 30px}
 .hero__inner{max-width:980px; margin:0 auto; text-align:center}
-.gradient{background:linear-gradient(90deg,#fff, #d8c7ff, var(--primary)); -webkit-background-clip:text; background-clip:text; color:transparent}
+.gradient{background:linear-gradient(90deg,#fff, #d8c7ff, var(--primary), var(--accent)); -webkit-background-clip:text; background-clip:text; color:transparent}
 .lead{color:#d8d9e6; max-width:760px; margin:12px auto 0}
 .cta{display:flex; gap:12px; justify-content:center; margin:22px 0 8px}
 .stats{display:flex; gap:22px; justify-content:center; padding:0; list-style:none; color:var(--muted)}
 .stats li{display:flex; flex-direction:column; align-items:center}
 
-/* Sections / cards */
+/* Sections / grid / cards */
 .section{max-width:1100px; margin:0 auto; padding:50px 20px}
 .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr))}
 .card{background:var(--panel); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:20px}
-.card.glass{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); backdrop-filter: blur(6px);}
+.card.glass{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); backdrop-filter: blur(6px)}
+.cards-portfolio .card{overflow:hidden}
+.thumb{display:block; width:100%; height:auto; border-radius:12px; margin-bottom:12px}
 
-/* Screenshots */
-.screenshots .shot{overflow:hidden; border-radius:18px; border:1px solid rgba(255,255,255,.08)}
-.screenshots img{display:block; width:100%; height:auto; transform:scale(1.01); transition:transform .5s}
-.screenshots .shot:hover img{transform:scale(1.06)}
+/* Badges & tags */
+.badges span, .tags span{display:inline-block; margin:6px 6px 0 0; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.14); font-size:.85rem; color:var(--text)}
+.tags span{background:rgba(255,255,255,.04)}
 
 /* Banner */
-.banner{margin:40px auto; max-width:900px; text-align:center; background:linear-gradient(135deg, rgba(122,60,255,.2), rgba(255,255,255,.04)); border:1px solid rgba(255,255,255,.12); border-radius:22px; padding:30px 18px}
+.banner{margin:40px auto; max-width:900px; text-align:center; background:linear-gradient(135deg, rgba(122,60,255,.20), rgba(86,194,255,.12)); border:1px solid rgba(255,255,255,.12); border-radius:22px; padding:30px 18px}
 
 /* Footer */
 .site-footer{padding:40px 20px; border-top:1px solid rgba(255,255,255,.06); background:rgba(0,0,0,.35)}
@@ -63,6 +76,7 @@ body{margin:0;background:radial-gradient(1200px 600px at 70% -10%, #2a0a4a 0%, t
 /* Download page extras */
 .downloads .card{text-align:center}
 .release{margin-top:26px}
+
 @media (max-width:640px){
   .nav a{display:none}
   .nav .btn{display:inline-block}
