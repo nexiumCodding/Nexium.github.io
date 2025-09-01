@@ -4,57 +4,90 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Nexium — Accueil</title>
-  <link rel="stylesheet" href="styles.css?v=2" />
-  <script src="script.js?v=2" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=4" />
+  <script src="script.js?v=4" defer></script>
 </head>
 <body>
   <!-- NAV -->
-  <header class="site-header">
-    <a class="brand" href="index.html"><span class="logo">✦</span><span>Nexium</span></a>
-    <nav class="nav">
-      <a href="index.html" aria-current="page">Accueil</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="download.html">Téléchargement</a>
-      <a href="servers.html">Nos serveurs</a>
-    </nav>
+  <header class="site-header with-contours --soft">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-logo">✦</span> <span class="brand-text">Nexium</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" aria-current="page">Accueil</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="download.html">Téléchargement</a>
+        <a href="servers.html">Nos serveurs</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="section">
-    <h1 class="gradient">Bienvenue dans l’univers Nexium</h1>
-    <p class="lead">Portfolio, Assistance Garry’s Mod et nos serveurs — le tout dans une ambiance galaxie/néon.</p>
+  <!-- HERO -->
+  <section class="hero with-contours">
+    <div class="container hero-inner">
+      <p class="eyebrow">Univers galaxie · violet & cyan</p>
+      <h1>Bienvenue dans <span class="grad">l’univers Nexium</span></h1>
+      <p class="subhead">Portfolio, Assistance Garry’s Mod & Nos serveurs — design pro, rapide et clair.</p>
 
-    <div class="grid cards-home">
-      <article class="card glass">
-        <img src="assets/banners/portfolio.jpg" alt="Portfolio Nexium" class="banner-img" />
+      <div class="actions">
+        <a class="btn btn-nx --assistant with-contours --tight --soft" href="download.html">Télécharger</a>
+        <a class="btn btn-ghost" href="portfolio.html">Voir le portfolio</a>
+      </div>
+
+      <ul class="stats">
+        <li><strong>+3</strong><span>projets actifs</span></li>
+        <li><strong>24/7</strong><span>support mail</span></li>
+        <li><strong>100%</strong><span>gratuit</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3 CARTES -->
+  <section class="container section">
+    <div class="grid cards-3">
+      <article class="card glass hover-up with-contours --soft">
+        <div class="banner with-contours --soft">
+          <img src="assets/banners/portfolio.jpg" alt="Portfolio Nexium" class="banner-img">
+        </div>
         <div class="card-body">
           <h2>Portfolio</h2>
-          <p>Découvre mes projets et créations.</p>
-          <a class="btn-nexium" href="portfolio.html">Voir</a>
+          <p>Mes créations : addons, maps, UI…</p>
+          <a class="btn btn-nx with-contours --tight --soft" href="portfolio.html">Voir</a>
         </div>
       </article>
 
-      <article class="card glass">
-        <img src="assets/banners/assistant.jpg" alt="Assistance Nexium" class="banner-img" />
+      <article class="card glass hover-up with-contours --soft">
+        <div class="banner with-contours --soft">
+          <img src="assets/banners/assistant.jpg" alt="Assistance Nexium" class="banner-img">
+        </div>
         <div class="card-body">
           <h2>Assistance GMod</h2>
-          <p>Télécharge l’application Nexium.</p>
-          <a class="btn-nexium --assistant" href="download.html">Télécharger</a>
+          <p>Application légère, claire, pensée pour aider.</p>
+          <a class="btn btn-nx --assistant with-contours --tight --soft" href="download.html">Télécharger</a>
         </div>
       </article>
 
-      <article class="card glass">
-        <img src="assets/banners/servers.jpg" alt="Serveurs Nexium" class="banner-img" />
+      <article class="card glass hover-up with-contours --soft">
+        <div class="banner with-contours --soft">
+          <img src="assets/banners/servers.jpg" alt="Serveurs Nexium" class="banner-img">
+        </div>
         <div class="card-body">
           <h2>Nos serveurs</h2>
-          <p>Rejoins nos mondes Garry’s Mod.</p>
-          <a class="btn-nexium --servers" href="servers.html">Découvrir</a>
+          <p>Rejoins nos mondes Garry’s Mod connectés.</p>
+          <a class="btn btn-nx --servers with-contours --tight --soft" href="servers.html">Découvrir</a>
         </div>
       </article>
     </div>
-  </main>
+  </section>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Nexium</p>
+  <footer class="site-footer with-contours --soft">
+    <div class="container foot">
+      <span>© <span id="year"></span> Nexium</span>
+      <span class="foot-muted">Design thème galaxie par Nexium</span>
+    </div>
   </footer>
 </body>
 </html>
