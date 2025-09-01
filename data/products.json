@@ -1,0 +1,28 @@
+[
+  {
+    "id": "eft",
+    "title": "Escape From Tarkov ESP",
+    "image": "assets/banners/portfolio.jpg",
+    "price": 14.99,
+    "short": "ESP + Aimbot safe, frequent updates.",
+    "long": "ESP complet, offsets auto, overlay discret et stable.",
+    "install": [
+      "Télécharge l'archive depuis 'Téléchargement'.",
+      "Décompresse dans un dossier vide.",
+      "Lance Nexium_Assistance avant le jeu.",
+      "Connecte-toi et entre ta clé (My Keys)."
+    ]
+  },
+  {
+    "id": "gmod-helper",
+    "title": "Nexium GMod Helper",
+    "image": "assets/banners/assistant.jpg",
+    "price": 9.99,
+    "short": "Assistant GMod pour administrer & debug.",
+    "install": [
+      "Installe Visual C++ Runtimes.",
+      "Lance Nexium_Assistance en admin.",
+      "Colle ta clé et clique Activer."
+    ]
+  }
+]
