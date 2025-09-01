@@ -1,6 +1,5 @@
 [
-  { "src": "assets/portfolio/portfolio.PNG", "alt": "Projet 1" },
-  { "src": "assets/portfolio/img2.png",     "alt": "Projet 2" },
-  { "src": "assets/portfolio/img3.jpg",     "alt": "Projet 3" },
-  { "src": "assets/portfolio/img1.jpg",     "alt": "Projet 4" }
+  { "src": "assets/portfolio/projet1.jpg", "alt": "Projet 1" },
+  { "src": "assets/portfolio/projet2.png", "alt": "Projet 2" },
+  { "src": "assets/portfolio/projet3.jpg", "alt": "Projet 3" }
 ]
